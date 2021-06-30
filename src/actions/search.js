@@ -17,10 +17,6 @@ var handleVideoSearch = (q) => {
     });
   };
 
-
-
-
-
 };
 
 export default handleVideoSearch;
