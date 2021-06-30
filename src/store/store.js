@@ -5,7 +5,10 @@ import exampleVideoData from '../data/exampleVideoData.js';
 
 var configureStore = createStore(
   rootReducer,
-  exampleVideoData,
+  {
+    videos: exampleVideoData,
+    currentVideo: exampleVideoData[0]
+  },
   applyMiddleware(thunk)
 );
 
