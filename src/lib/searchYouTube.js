@@ -10,13 +10,11 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     videoEmbeddable: 'true'
   })
     .done(({items}) => {
-
       if (callback) {
         callback(items);
       }
     })
     .fail(({responseJSON}) => {
-      debugger;
       responseJSON.error.errors.forEach((err) =>
         console.error(err)
       );

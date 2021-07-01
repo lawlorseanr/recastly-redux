@@ -9,21 +9,21 @@ import handleSearchChange from '../actions/search.js';
    and pass into that component to interact with redux store
 */
 
-const mapStateToProps = (state) => {
-  // this object will become part of the props that will be passed into component
-  return {
-    // don't want to make a whole lot of changes to react application
-    value: state.value
-  };
-};
+// const mapStateToProps = (state) => {
+//   // this object will become part of the props that will be passed into component
+//   return {
+//     // don't want to make a whole lot of changes to react application
+//     value: state.value
+//   };
+// };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     // come up with a way to replace the updateCounter logic on app.js
-    handleSearchInputChange: (type) => dispatch({ type })
+    handleSearchInputChange: (query) => dispatch(handleSearchChange(query)),
+    sean: 100
   };
 };
-
 
 //TODO: define a SearchContainer component which will hook up your action
 // dispatchers with your search component props.
@@ -31,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
 //state and dispatch mappings.
 
 // these are both functions, designed to return an object
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(Search);
