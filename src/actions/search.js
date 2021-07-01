@@ -7,7 +7,6 @@ var handleVideoSearch = (q) => {
 
   return (dispatch) => {
     searchYouTube({key: YOUTUBE_API_KEY, query: q, max: 5}, (items) => {
-      // action creators are functions that are DISPATCHED to emit a change
       dispatch(changeVideoList(items));
       dispatch(changeVideo(items[0]));
     });

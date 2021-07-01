@@ -7,9 +7,6 @@ import VideoPlayerContainer from '../containers/VideoPlayerContainer';
 import SearchContainer from '../containers/SearchContainer';
 
 var App = () => {
-  //TODO: swap out the React components below for the container components
-  //  you wrote in the 'containers' directory.
-  // render() {
   return (
     <div>
       <nav className="navbar">
@@ -27,8 +24,6 @@ var App = () => {
       </div>
     </div>
   );
-  // }
-  // }
 };
 
 export default App;
